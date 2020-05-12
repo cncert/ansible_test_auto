@@ -1,0 +1,7 @@
+*.log
+*.retry
+*.zip
+*.tgz
+.idea/
+org.kde.konsole*
+venv/

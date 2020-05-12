@@ -1,0 +1,7 @@
+---
+- name: get host ip
+  set_fact: host_ip="{{ (ansible_ssh_host|default(ansible_host))|default(inventory_hostname) }}"
+
+- name: display yum_output_stderr
+  debug: var=host_ip verbosity=0
+

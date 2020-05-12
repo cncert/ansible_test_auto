@@ -1,0 +1,15 @@
+---
+app_name: ntpd
+ntp_timezone: Asia/Shanghai
+ntp_restrict:
+  - "127.0.0.1"
+  - "::1"
+ntp_driftfile: /var/lib/ntp/drift
+ntp_servers:
+  - "1.1.1.12"
+ntpserver:
+  - "ntp.china.cn"
+ntp_src_tar: ntp-4.2.8p13.tar.gz
+ntp_src_tar_5: ntp-4.2.8p10.tar.gz
+ntpd_init_template: centos5-6-service.j2
+ntpd_systemd_template: centos7-service.j2

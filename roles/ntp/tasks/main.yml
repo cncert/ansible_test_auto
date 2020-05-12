@@ -1,0 +1,13 @@
+---
+- name: check action is support
+  command: /bin/true
+  failed_when: (action not in ['install','stop','start'])
+
+- import_tasks: install.yml
+  when: action == "install"
+
+- import_tasks: stop.yml
+  when: action == "stop"
+
+- import_tasks: start.yml
+  when: action == "start"
